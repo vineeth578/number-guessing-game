@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Number Guessing Game</h1>
+    <p>Select a difficulty level:</p>
+    <div class="difficulty">
+      <button data-range="50" class="difficulty-btn">Easy (1-50)</button>
+      <button data-range="100" class="difficulty-btn">Medium (1-100)</button>
+      <button data-range="500" class="difficulty-btn">Hard (1-500)</button>
+    </div>
+
+    <p id="rangeInfo"></p>
+    <div id="gameSection" style="display: none;">
+      <div class="game">
+        <input type="number" id="guessInput" placeholder="Enter your guess" />
+        <button id="submitGuess">Submit</button>
+        <button id="restartGame">Restart</button>
+      </div>
+
+      <div class="feedback">
+        <p id="feedbackMessage"></p>
+        <p id="attemptsMessage"></p>
+        <p id="hintMessage"></p>
+      </div>
+
+      <p id="randomNumberDisplay" style="display: none;"></p>
+      <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <p id="highScoreMessage">No high scores yet!</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+
+</body>
+</html>
